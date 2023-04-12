@@ -2,32 +2,48 @@
     --theme-color-red: 255;
     --theme-color-green: 159;
     --theme-color-blue: 172;
-    --theme-color-rgb: rgb(var(--theme-color-red),var(--theme-color-green),var(--theme-color-blue));
+    --theme-color-rgb: rgb(var(--theme-color-red), var(--theme-color-green), var(--theme-color-blue));
 }
 svg > g > path {
     fill: var(--theme-color-rgb);
 }
-[aria-selected = true]:not([data-testid=typeaheadResult]) > div > div:not([data-testid=TypeaheadUser]) > div,
-a[data-testid=AppTabBar_Notifications_Link] div > div > [aria-live="polite"],
-a[data-testid=SideNav_NewTweet_Button],
+[aria-selected="true"]:not([data-testid="typeaheadResult"]) > div > div:not([data-testid="TypeaheadUser"]) > div,
+a[data-testid="AppTabBar_Notifications_Link"] div > div > [aria-live="polite"],
+a[data-testid="SideNav_NewTweet_Button"],
 a[href*="/communities"] > div > div > div[aria-label],
-nav[role=navigation] > a[data-testid] > div > div > div[aria-label],
-div[role=tablist][data-testid="ScrollSnap-List"] > div[role=presentation] > a[href^="/i/communities/"] > div[aria-label],
+nav[role="navigation"] > a[data-testid] > div > div > div[aria-label],
+div[role="tablist"][data-testid="ScrollSnap-List"] > div[role="presentation"] > a[href^="/i/communities/"] > div[aria-label],
 [data-testid="card.layoutSmall.media"] > div > div > div[aria-label],
-[data-testid^=tweetButton],
-[role=menuitem] > div > div:not([dir=ltr]),
-div[data-testid=primaryColumn] > div[aria-label] > div > div > div > div[role=status] > div[role=button][aria-label],
-div[data-testid=userAvatars] > div > [data-testid="UserAvatar-Container-unknown"] > div > div > div > div > div[role=presentation] > div[style^="height: calc(100% - 4px); width: calc(100% - 4px);"] > div,
-[role=alert][data-testid=toast],
-article[role=article][data-testid=tweet] > div > div > div > div > div > div > div[role=button] > div> div > div > div:not([dir=ltr]),
-[data-testid=messageEntry] > div > div > div[role=presentation],
-[role=search] > div > div > div > div > label[data-testid=SearchBox_Search_Input_label] > div > div[data-testid=clearButton],
-[data-testid=cellInnerDiv] > div > div > div > a[href^="/i/topics/"][aria-labelledby^=topic][role=link] > div > div:not([id^=topic]):nth-child(2) {
+[data-testid^="tweetButton"],
+[role="menuitem"] > div > div:not([dir="ltr"]),
+div[data-testid="primaryColumn"] > div[aria-label] > div > div > div > div[role="status"] > div[role="button"][aria-label],
+div[data-testid="userAvatars"] > div > [data-testid="UserAvatar-Container-unknown"] > div > div > div > div > div[role="presentation"] > div[style^="height: calc(100% - 4px); width: calc(100% - 4px);"] > div,
+[role="alert"][data-testid="toast"],
+article[role="article"][data-testid="tweet"] > div > div > div > div > div > div > div[role="button"] > div > div > div > div:not([dir="ltr"]),
+[data-testid="messageEntry"] > div > div > div[role="presentation"],
+[role="search"] > div > div > div > div > label[data-testid="SearchBox_Search_Input_label"] > div > div[data-testid="clearButton"],
+[data-testid="cellInnerDiv"] > div > div > div > a[href^="/i/topics/"][aria-labelledby^="topic"][role="link"] > div > div:not([id^="topic"]):nth-child(2),
+[data-testid="primaryColumn"] > div > div > div > section[role="region"] > div[aria-label] > div > div > div[role="button"],
+[role="slider"][aria-valuenow] > div,
+div[id="layers"] > div > div > div > [role="dialog"] > div > div > [role="group"] > [aria-labelledby="modal-header"][aria-modal="true"][role="dialog"] > div > div > div[data-viewportview] > div:not([role="navigation"]) > div > div > div > div:nth-child(2):not([style^="height"]) > div > div:nth-child(2) > div > div:nth-child(2),
+[role="main"] > div > div > div > div:nth-child(2) > div > div > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2) > div,
+[role="main"] > div > div > div > div:nth-child(2) > div > div > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(2),
+div[id="layers"] > div > div > div > [role="dialog"] > div > div > [role="group"] > [aria-labelledby="modal-header"][aria-modal="true"][role="dialog"] > div > div > div[data-viewportview] > div:not([role="navigation"]) > div > div > div > div:nth-child(2):not([style^="height"]) > div > div:not([role="button"]):nth-child(2) > div {
     background-color: var(--theme-color-rgb) !important;
 }
-div > div> div > div > div> div> div> div> div>div > div > div > div > div[role=button]:not([data-testid^=tweetButton]):hover,
+div > div > div > div > div > div > div > div > div > div > div > div > div > div[role=button]:not([data-testid^=tweetButton]):hover,
 [data-testid=cellInnerDiv] > div > div > a[href="/compose/tweet"][role=link] > div > div > div[role=presentation]:hover {
-    background-color: rgba(var(--theme-color-red),var(--theme-color-green),var(--theme-color-blue),0.1) !important;
+    background-color: rgba(var(--theme-color-red), var(--theme-color-green), var(--theme-color-blue), 0.1) !important;
+}
+div[id=layers] > div > div > div > [role=dialog] > div > div > [role=group] > [aria-labelledby=modal-header][aria-modal=true][role=dialog] > div > div > div[data-viewportview] > div > div > div > div > div[style^=height],
+[role=main] > div > div > div > div > div > div > div > div[style^=height],
+main[role=main] > div > div > div > div > div > div > div > div > label[aria-label],
+div[id=layers] > div > div > div > [role=dialog] > div > div > [role=group] > [aria-labelledby=modal-header][aria-modal=true][role=dialog] > div > div > div[data-viewportview] > div:not([role=navigation]) > div > div > div > div > label {
+    border-color: var(--theme-color-rgb);
+}
+main[role=main] > div > div > div > div > div > div > div > div > label[aria-label],
+div[id=layers] > div > div > div > [role=dialog] > div > div > [role=group] > [aria-labelledby=modal-header][aria-modal=true][role=dialog] > div > div > div[data-viewportview] > div:not([role=navigation]) > div > div > div > div > label {
+    box-shadow: var(--theme-color-rgb) 0px 0px 0px 1px;
 }
 a[role=link],
 a[href="/explore/tabs/for-you"] > div[dir=ltr],
@@ -38,13 +54,17 @@ article[role=article][data-testid=tweet] > div > a[href][role=link] > div > div 
 [data-testid=cellInnerDiv] > div > div > a[href="/compose/tweet"][role=link] > div > div > div[role=presentation] > div[dir=ltr],
 [data-testid=cellInnerDiv] > div > div > div > a[href^="/i/status/"][role=link] > div > div > div[dir=ltr],
 article[role=article][data-testid=tweet] > div > div > div > div > div > div[role=button],
-article[role=article][data-testid=tweet] > div > div > div >div > div > div > span[role=button],
-[data-testid=cellInnerDiv] > div > div > div > div > div > div > div > div > div >div[role=button][dir=ltr] > span[dir=ltr],
+article[role=article][data-testid=tweet] > div > div > div > div > div > div > span[role=button],
+[data-testid=cellInnerDiv] > div > div > div > div > div > div > div > div > div > div[role=button][dir=ltr] > span[dir=ltr],
 [aria-activedescendant^="typeaheadFocus"] > div > div[data-editor][data-offset-key] > div[data-offset-key] > span[style],
 [aria-labelledby="modal-header"] > div > div > div[data-viewportview] > div > div > div > div > div > div > div[dir=ltr][role=button] > span[dir=ltr],
 div[data-testid=UserProfileHeader_Items] > a[data-testid=UserUrl],
 form[role=search] > div > div > div[id^=typeaheadDropdown] > div[data-testid=typeaheadRecentSearchesHeader] > div[role=button] > div[dir=ltr],
-[data-testid=cellInnerDiv] > div > div > a[href^="/i/topics/"][role=link] > div[dir=ltr] {
+[data-testid=cellInnerDiv] > div > div > a[href^="/i/topics/"][role=link] > div[dir=ltr],
+main[role=main] > div > div > div > div > div > div > div > div > label[aria-label] > div > div > div[dir=ltr],
+main[role=main] > div > div > div > div > div > div > div > div > div > div > div[aria-live=polite] > div[dir=ltr] > span[role=button],
+div[id=layers] > div > div > div > [role=dialog] > div > div > [role=group] > [aria-labelledby=modal-header][aria-modal=true][role=dialog] > div > div > div[data-viewportview] > div:not([role=navigation]) > div > div > div > div > label[aria-label] > div > div > div[dir=ltr],
+div[id=layers] > div > div > div > [role=dialog] > div > div > [role=group] > [aria-labelledby=modal-header][aria-modal=true][role=dialog] > div > div > div[data-viewportview] > div:not([role=navigation]) > div > div > div > div:nth-child(2) > div > div > div > div[dir=ltr] > span {
     color: var(--theme-color-rgb) !important;
 }
 circle[stroke-dashoffset] {
@@ -57,8 +77,9 @@ circle[stroke-dashoffset] {
 [data-testid="card.layoutSmall.media"] > div > div > div[aria-label] > div > svg > g > path,
 [role=menuitem] > div > div > svg > g > path,
 div[data-testid=primaryColumn] > div[aria-label] > div > div > div > div[role=status] > div[role=button][aria-label] > div > svg > g > path,
-[role=article][data-testid=tweet] > div > div > div > div > div > div > div[role=button] > div> div > div > div:not([dir=ltr]) > svg > g > path,
+[role=article][data-testid=tweet] > div > div > div > div > div > div > div[role=button] > div > div > div > div:not([dir=ltr]) > svg > g > path,
 [role=search] > div > div > div > div > label[data-testid=SearchBox_Search_Input_label] > div > div[data-testid=clearButton] > div[dir=ltr] > svg > g > path,
-[data-testid=cellInnerDiv] > div > div > div > a[href^="/i/topics/"][aria-labelledby^=topic][role=link] > div > div:not([id^=topic]):nth-child(2) > svg > g > path {
+[data-testid=cellInnerDiv] > div > div > div > a[href^="/i/topics/"][aria-labelledby^=topic][role=link] > div > div:not([id^=topic]):nth-child(2) > svg > g > path,
+[data-testid=primaryColumn] > div > div > div > section[role=region] > div[aria-label] > div > div > div[role=button] > div[dir=ltr] > svg > g > path {
     fill: #fff !important;
 }
