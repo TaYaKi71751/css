@@ -1,0 +1,25 @@
+* {
+    --theme-color: #FF9FAC;
+}
+svg > g > path {
+    fill: var(--theme-color);
+}
+[aria-selected = true] > div > div > div,
+a[data-testid=AppTabBar_Notifications_Link] div > div > [aria-live="polite"],
+a[data-testid=SideNav_NewTweet_Button],
+nav[role=navigation] > a[data-testid] > div > div > div[aria-label],
+div[role=tablist][data-testid=ScrollSnap-List] > div[role=presentation] > a[href^="/i/communities/"] > div[aria-label],
+[data-testid="card.layoutSmall.media"] > div > div > div[aria-label],
+[data-testid=tweetButtonInline] {
+    background-color: var(--theme-color) !important;
+}
+a[role=link],
+a[href="/explore/tabs/for-you"] > div[dir=ltr],
+a[href^="/i/connect_people?user_id="][role=link] > div[dir=ltr],
+div[data-testid=cellInnerDiv] > div > div[role=button] > div > div[dir=ltr] {
+    color: var(--theme-color);
+}
+[data-testid=SideNav_NewTweet_Button] > div > svg > g > path,
+[data-testid="card.layoutSmall.media"] > div > div > div[aria-label] > div > svg > g > path {
+    fill: #fff !important;
+}
