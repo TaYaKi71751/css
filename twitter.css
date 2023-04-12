@@ -21,7 +21,8 @@ div[data-testid=userAvatars] > div > [data-testid="UserAvatar-Container-unknown"
 [role=alert][data-testid=toast],
 article[role=article][data-testid=tweet] > div > div > div > div > div > div > div[role=button] > div> div > div > div:not([dir=ltr]),
 [data-testid=messageEntry] > div > div > div[role=presentation],
-[role=search] > div > div > div > div > label[data-testid=SearchBox_Search_Input_label] > div > div[data-testid=clearButton] {
+[role=search] > div > div > div > div > label[data-testid=SearchBox_Search_Input_label] > div > div[data-testid=clearButton],
+[data-testid=cellInnerDiv] > div > div > div > a[href^="/i/topics/"][aria-labelledby^=topic][role=link] > div > div:not([id^=topic]):nth-child(2) {
     background-color: var(--theme-color-rgb) !important;
 }
 div > div> div > div > div> div> div> div> div>div > div > div > div > div[role=button]:not([data-testid^=tweetButton]):hover,
@@ -42,7 +43,8 @@ article[role=article][data-testid=tweet] > div > div > div >div > div > div > sp
 [aria-activedescendant^="typeaheadFocus"] > div > div[data-editor][data-offset-key] > div[data-offset-key] > span[style],
 [aria-labelledby="modal-header"] > div > div > div[data-viewportview] > div > div > div > div > div > div > div[dir=ltr][role=button] > span[dir=ltr],
 div[data-testid=UserProfileHeader_Items] > a[data-testid=UserUrl],
-form[role=search] > div > div > div[id^=typeaheadDropdown] > div[data-testid=typeaheadRecentSearchesHeader] > div[role=button] > div[dir=ltr] {
+form[role=search] > div > div > div[id^=typeaheadDropdown] > div[data-testid=typeaheadRecentSearchesHeader] > div[role=button] > div[dir=ltr],
+[data-testid=cellInnerDiv] > div > div > a[href^="/i/topics/"][role=link] > div[dir=ltr] {
     color: var(--theme-color-rgb) !important;
 }
 circle[stroke-dashoffset] {
@@ -56,6 +58,7 @@ circle[stroke-dashoffset] {
 [role=menuitem] > div > div > svg > g > path,
 div[data-testid=primaryColumn] > div[aria-label] > div > div > div > div[role=status] > div[role=button][aria-label] > div > svg > g > path,
 [role=article][data-testid=tweet] > div > div > div > div > div > div > div[role=button] > div> div > div > div:not([dir=ltr]) > svg > g > path,
-[role=search] > div > div > div > div > label[data-testid=SearchBox_Search_Input_label] > div > div[data-testid=clearButton] > div[dir=ltr] > svg > g > path {
+[role=search] > div > div > div > div > label[data-testid=SearchBox_Search_Input_label] > div > div[data-testid=clearButton] > div[dir=ltr] > svg > g > path,
+[data-testid=cellInnerDiv] > div > div > div > a[href^="/i/topics/"][aria-labelledby^=topic][role=link] > div > div:not([id^=topic]):nth-child(2) > svg > g > path {
     fill: #fff !important;
 }
