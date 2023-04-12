@@ -7,7 +7,7 @@
 svg > g > path {
     fill: var(--theme-color-rgb);
 }
-[aria-selected="true"]:not([data-testid="typeaheadResult"]) > div > div:not([data-testid="TypeaheadUser"]) > div,
+[aria-selected="true"]:not([data-testid="typeaheadResult"]) > div > div:not([data-testid="TypeaheadUser"]) > div:not([data-testid="test-LTRtext"]),
 a[data-testid="AppTabBar_Notifications_Link"] div > div > [aria-live="polite"],
 a[data-testid="SideNav_NewTweet_Button"],
 a[href*="/communities"] > div > div > div[aria-label],
