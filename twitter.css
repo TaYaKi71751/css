@@ -1,8 +1,11 @@
 * {
-    --theme-color: #FF9FAC;
+    --theme-color-red: 255;
+    --theme-color-green: 159;
+    --theme-color-blue: 172;
+    --theme-color-rgb: rgb(var(--theme-color-red),var(--theme-color-green),var(--theme-color-blue));
 }
 svg > g > path {
-    fill: var(--theme-color);
+    fill: var(--theme-color-rgb);
 }
 [aria-selected = true] > div > div > div,
 a[data-testid=AppTabBar_Notifications_Link] div > div > [aria-live="polite"],
@@ -15,17 +18,20 @@ div[role=tablist][data-testid="ScrollSnap-List"] > div[role=presentation] > a[hr
 [role=menuitem] > div > div:not([dir=ltr]),
 div[data-testid=primaryColumn] > div[aria-label] > div > div > div > div[role=status] > div[role=button][aria-label],
 [data-testid="UserAvatar-Container-unknown"] > div > div > div > div > div[role=presentation] > div[style^="height: calc(100% - 4px); width: calc(100% - 4px);"] > div {
-    background-color: var(--theme-color) !important;
+    background-color: var(--theme-color-rgb) !important;
+}
+div > div> div > div > div> div> div> div> div>div > div > div > div > div[role=button]:not([data-testid^=tweetButton]):hover {
+    background-color: rgba(var(--theme-color-red),var(--theme-color-green),var(--theme-color-blue),0.1) !important;
 }
 a[role=link],
 a[href="/explore/tabs/for-you"] > div[dir=ltr],
 a[href^="/i/connect_people?user_id="][role=link] > div[dir=ltr],
 div[data-testid=cellInnerDiv] > div > div[role=button] > div > div[dir=ltr],
 div[aria-label] > div[dir=ltr] {
-    color: var(--theme-color);
+    color: var(--theme-color-rgb);
 }
 circle[stroke-dashoffset] {
-    stroke: var(--theme-color);
+    stroke: var(--theme-color-rgb);
 }
 [data-testid=SideNav_NewTweet_Button] > div > svg > g > path,
 [data-testid="card.layoutSmall.media"] > div > div > div[aria-label] > div > svg > g > path,
