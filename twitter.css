@@ -7,7 +7,7 @@
 svg > g > path {
     fill: var(--theme-color-rgb);
 }
-[aria-selected = true] > div > div > div,
+[aria-selected = true]:not([data-testid=typeaheadResult]) > div > div:not([data-testid=TypeaheadUser]) > div,
 a[data-testid=AppTabBar_Notifications_Link] div > div > [aria-live="polite"],
 a[data-testid=SideNav_NewTweet_Button],
 a[href*="/communities"] > div > div > div[aria-label],
@@ -20,7 +20,8 @@ div[data-testid=primaryColumn] > div[aria-label] > div > div > div > div[role=st
 div[data-testid=userAvatars] > div > [data-testid="UserAvatar-Container-unknown"] > div > div > div > div > div[role=presentation] > div[style^="height: calc(100% - 4px); width: calc(100% - 4px);"] > div,
 [role=alert][data-testid=toast],
 article[role=article][data-testid=tweet] > div > div > div > div > div > div > div[role=button] > div> div > div > div:not([dir=ltr]),
-[data-testid=messageEntry] > div > div > div[role=presentation] {
+[data-testid=messageEntry] > div > div > div[role=presentation],
+[role=search] > div > div > div > div > label[data-testid=SearchBox_Search_Input_label] > div > div[data-testid=clearButton] {
     background-color: var(--theme-color-rgb) !important;
 }
 div > div> div > div > div> div> div> div> div>div > div > div > div > div[role=button]:not([data-testid^=tweetButton]):hover,
@@ -36,16 +37,25 @@ article[role=article][data-testid=tweet] > div > a[href][role=link] > div > div 
 [data-testid=cellInnerDiv] > div > div > a[href="/compose/tweet"][role=link] > div > div > div[role=presentation] > div[dir=ltr],
 [data-testid=cellInnerDiv] > div > div > div > a[href^="/i/status/"][role=link] > div > div > div[dir=ltr],
 article[role=article][data-testid=tweet] > div > div > div > div > div > div[role=button],
-article[role=article][data-testid=tweet] > div > div > div >div > div > div > span[role=button] {
-    color: var(--theme-color-rgb);
+article[role=article][data-testid=tweet] > div > div > div >div > div > div > span[role=button],
+[data-testid=cellInnerDiv] > div > div > div > div > div > div > div > div > div >div[role=button][dir=ltr] > span[dir=ltr],
+[aria-activedescendant^="typeaheadFocus"] > div > div[data-editor][data-offset-key] > div[data-offset-key] > span[style],
+[aria-labelledby="modal-header"] > div > div > div[data-viewportview] > div > div > div > div > div > div > div[dir=ltr][role=button] > span[dir=ltr],
+div[data-testid=UserProfileHeader_Items] > a[data-testid=UserUrl],
+form[role=search] > div > div > div[id^=typeaheadDropdown] > div[data-testid=typeaheadRecentSearchesHeader] > div[role=button] > div[dir=ltr] {
+    color: var(--theme-color-rgb) !important;
 }
 circle[stroke-dashoffset] {
     stroke: var(--theme-color-rgb);
+}
+[role=search] > div > div {
+    border-color: var(--theme-color-rgb) !important;
 }
 [data-testid=SideNav_NewTweet_Button] > div > svg > g > path,
 [data-testid="card.layoutSmall.media"] > div > div > div[aria-label] > div > svg > g > path,
 [role=menuitem] > div > div > svg > g > path,
 div[data-testid=primaryColumn] > div[aria-label] > div > div > div > div[role=status] > div[role=button][aria-label] > div > svg > g > path,
-[role=article][data-testid=tweet] > div > div > div > div > div > div > div[role=button] > div> div > div > div:not([dir=ltr]) > svg > g > path {
+[role=article][data-testid=tweet] > div > div > div > div > div > div > div[role=button] > div> div > div > div:not([dir=ltr]) > svg > g > path,
+[role=search] > div > div > div > div > label[data-testid=SearchBox_Search_Input_label] > div > div[data-testid=clearButton] > div[dir=ltr] > svg > g > path {
     fill: #fff !important;
 }
