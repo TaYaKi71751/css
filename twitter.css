@@ -17,12 +17,14 @@ div[role=tablist][data-testid="ScrollSnap-List"] > div[role=presentation] > a[hr
 [data-testid^=tweetButton],
 [role=menuitem] > div > div:not([dir=ltr]),
 div[data-testid=primaryColumn] > div[aria-label] > div > div > div > div[role=status] > div[role=button][aria-label],
-[data-testid="UserAvatar-Container-unknown"] > div > div > div > div > div[role=presentation] > div[style^="height: calc(100% - 4px); width: calc(100% - 4px);"] > div,
+div[data-testid=userAvatars] > div > [data-testid="UserAvatar-Container-unknown"] > div > div > div > div > div[role=presentation] > div[style^="height: calc(100% - 4px); width: calc(100% - 4px);"] > div,
 [role=alert][data-testid=toast],
-[role=article][data-testid=tweet] > div > div > div > div > div > div > div[role=button] > div> div > div > div:not([dir=ltr]) {
+article[role=article][data-testid=tweet] > div > div > div > div > div > div > div[role=button] > div> div > div > div:not([dir=ltr]),
+[data-testid=messageEntry] > div > div > div[role=presentation] {
     background-color: var(--theme-color-rgb) !important;
 }
-div > div> div > div > div> div> div> div> div>div > div > div > div > div[role=button]:not([data-testid^=tweetButton]):hover {
+div > div> div > div > div> div> div> div> div>div > div > div > div > div[role=button]:not([data-testid^=tweetButton]):hover,
+[data-testid=cellInnerDiv] > div > div > a[href="/compose/tweet"][role=link] > div > div > div[role=presentation]:hover {
     background-color: rgba(var(--theme-color-red),var(--theme-color-green),var(--theme-color-blue),0.1) !important;
 }
 a[role=link],
@@ -30,7 +32,11 @@ a[href="/explore/tabs/for-you"] > div[dir=ltr],
 a[href^="/i/connect_people?user_id="][role=link] > div[dir=ltr],
 div[data-testid=cellInnerDiv] > div > div[role=button] > div > div[dir=ltr],
 div[aria-label] > div[dir=ltr],
-article[role=article][data-testid=tweet] > div > a[href][role=link] > div > div > div[dir=ltr] {
+article[role=article][data-testid=tweet] > div > a[href][role=link] > div > div > div[dir=ltr],
+[data-testid=cellInnerDiv] > div > div > a[href="/compose/tweet"][role=link] > div > div > div[role=presentation] > div[dir=ltr],
+[data-testid=cellInnerDiv] > div > div > div > a[href^="/i/status/"][role=link] > div > div > div[dir=ltr],
+article[role=article][data-testid=tweet] > div > div > div > div > div > div[role=button],
+article[role=article][data-testid=tweet] > div > div > div >div > div > div > span[role=button] {
     color: var(--theme-color-rgb);
 }
 circle[stroke-dashoffset] {
