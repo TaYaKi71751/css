@@ -17,7 +17,8 @@ div[role=tablist][data-testid="ScrollSnap-List"] > div[role=presentation] > a[hr
 [data-testid^=tweetButton],
 [role=menuitem] > div > div:not([dir=ltr]),
 div[data-testid=primaryColumn] > div[aria-label] > div > div > div > div[role=status] > div[role=button][aria-label],
-[data-testid="UserAvatar-Container-unknown"] > div > div > div > div > div[role=presentation] > div[style^="height: calc(100% - 4px); width: calc(100% - 4px);"] > div {
+[data-testid="UserAvatar-Container-unknown"] > div > div > div > div > div[role=presentation] > div[style^="height: calc(100% - 4px); width: calc(100% - 4px);"] > div,
+[role=alert][data-testid=toast] {
     background-color: var(--theme-color-rgb) !important;
 }
 div > div> div > div > div> div> div> div> div>div > div > div > div > div[role=button]:not([data-testid^=tweetButton]):hover {
